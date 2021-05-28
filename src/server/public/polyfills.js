@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/dvergar/Sunrise/zemoga/zemoga-jsshouts/src/client/src/polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! /Users/jgonza4/Desktop/Apps/jsshouts/zemoga-jsshouts/src/client/src/polyfills.ts */"hN/g");
 
 
 /***/ }),
