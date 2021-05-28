@@ -16,7 +16,7 @@ export class FacebookService {
       })
       .pipe(map(({ posts }: any) => {
         const { data } = posts;
-        return data.map(result => result.attachments?.data[0]);
+        return data.map(result => result.attachments?.data[0]).filter(({ type }) => type !== "photo");
       }));
   }
 
