@@ -27,8 +27,8 @@ export class FacebookService {
         withCredentials: true,
       })
       .pipe(map(({ photos }: any) => {
-        const { data } = photos;
-        return data;
+        const { images } = photos;
+        return images;
       }));
   }
 
