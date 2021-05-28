@@ -971,8 +971,7 @@ class FacebookService {
         return this.http.get(`${_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl}me/photos`, {
             withCredentials: true,
         })
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["map"])(({ photos }) => {
-            const { data } = photos;
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["map"])(({ data }) => {
             return data;
         }));
     }
