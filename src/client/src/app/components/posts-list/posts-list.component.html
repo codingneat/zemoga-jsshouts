@@ -1,10 +1,9 @@
 <mat-list>
   <mat-grid-list cols="3" rowHeight="2:3">
     <mat-grid-tile *ngFor="let post of posts">
-      <mat-card class="example-card">
+      <mat-card class="example-card" *ngIf="(post?.type !== 'photo')">
         <mat-card-header>
           <mat-card-title>{{ post?.title }}</mat-card-title>
-          <mat-card-subtitle>{{ post?.type }}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image height="300" [src]="post?.media?.image?.src" />
         <mat-card-content>
