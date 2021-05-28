@@ -972,8 +972,8 @@ class FacebookService {
             withCredentials: true,
         })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["map"])(({ photos }) => {
-            const { images } = photos;
-            return images;
+            const { data } = photos;
+            return data;
         }));
     }
     getProfile() {
@@ -1227,7 +1227,7 @@ function PhotosListComponent_mat_grid_tile_2_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     const photo_r1 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", photo_r1 == null ? null : photo_r1.source, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", photo_r1 == null ? null : photo_r1.picture, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
 } }
 class PhotosListComponent {
 }

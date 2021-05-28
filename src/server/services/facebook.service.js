@@ -1,4 +1,5 @@
 import { GRAPH_URL, requestData } from "../utils/auth";
+import mock from "./mock"
 
 const fbOptions = (url, accessToken, fields)  => ({
     url: `${GRAPH_URL}/${url}`,
@@ -23,13 +24,15 @@ const getMyPosts = async (req, res) => {
     res.status(200).send(posts);
 };
 
-//me/photos?fields=images&type=uploaded
 const getMyPhotos = async (req, res) => {
     const { accessToken } = req.session;
     const options = fbOptions("me/photos", accessToken, "comments,images&type=uploaded");
-    const { data } = await requestData(options);
+    const pictures = await requestData(options);
+    const photos = pictures.data[0].images;
     res.status(200).send({
-        photos: data,
+        data: photos.map(picture => ({
+            picture: picture.source
+        })),
     });
 };
 
