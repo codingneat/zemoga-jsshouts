@@ -1,12 +1,12 @@
-<mat-card>
-  <mat-card-title>
-    <h2 class="header-title">Users</h2>
-  </mat-card-title>
-  <mat-card-content>
-    <app-users-list
-      *ngIf="users$ | async"
-      [users]="users$ | async"
-    ></app-users-list>
-    <mat-spinner *ngIf="!(users$ | async)"></mat-spinner>
-  </mat-card-content>
-</mat-card>
+<section>
+  <h2 class="section__name">Users</h2>
+  <mat-card>
+    <mat-card-content>
+      <app-users-list
+        *ngIf="users$ | async"
+        [users]="users$ | async"
+      ></app-users-list>
+      <mat-spinner *ngIf="!(users$ | async)"></mat-spinner>
+    </mat-card-content>
+  </mat-card>
+</section>

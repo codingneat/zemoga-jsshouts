@@ -1,12 +1,12 @@
-<mat-card>
-  <mat-card-title>
-    <h2>Posts</h2>
-  </mat-card-title>
-  <mat-card-content>
-    <app-posts-list
-      *ngIf="posts$ | async"
-      [posts]="posts$ | async"
-    ></app-posts-list>
-    <mat-spinner *ngIf="!(posts$ | async)"></mat-spinner>
-  </mat-card-content>
-</mat-card>
+<section>
+  <h2 class="section__name">Posts</h2>
+  <mat-card>
+    <mat-card-content>
+      <app-posts-list
+        *ngIf="posts$ | async"
+        [posts]="posts$ | async"
+      ></app-posts-list>
+      <mat-spinner *ngIf="!(posts$ | async)"></mat-spinner>
+    </mat-card-content>
+  </mat-card>
+</section>

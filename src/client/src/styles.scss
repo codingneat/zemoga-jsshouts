@@ -4,7 +4,7 @@ html,
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background: #fff;
+  background: #f3f3f3;
   margin: 0;
   height: 100%;
   overflow: auto;
@@ -36,4 +36,33 @@ mat-card {
 .mat-toolbar.mat-primary {
   background: #2F0B1F;
   color: #fff;
+}
+
+.mat-spinner {
+  margin: 0 auto;
+  transform: scale(.6);
+}
+
+.section{
+  &__name{
+    font-size: 2em !important;
+    color: #5a5a5a;
+  }
+}
+
+.mat-card-image {
+  width: calc(100% + 32px);
+  margin: 0 -16px 0 -16px;
+  height: 225px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mat-card-header-text{
+  margin: 0 !important;
+}
+
+.mat-card-header .mat-card-title {
+  font-size: 14px;
+  margin: 10px 0 0 0 !important;
 }

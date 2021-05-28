@@ -1,10 +1,13 @@
-<mat-card>
-  <mat-card-title>
-    <h2>Home</h2>
-  </mat-card-title>
-  <mat-card-content>
-    <span [style.marginTop.px]="50" *ngIf="isAuthenticated$ | async">
-      You're Authenticated
-    </span>
-  </mat-card-content>
-</mat-card>
+
+<section>
+  <h2 class="section__name">Home</h2>
+  <mat-card>
+    <mat-card-content>
+      <span [style.marginTop.px]="50" *ngIf="isAuthenticated$ | async">
+        You are authenticated. Welcome!
+      </span>
+
+      <h2>Something insteresting should be here!</h2>
+    </mat-card-content>
+  </mat-card>
+</section>
