@@ -31,15 +31,19 @@ const getMyPhotos = async (req, res) => {
     const { accessToken } = req.session;
     const options = fbOptions("me/photos", accessToken, {
         fields: "comments,images",
-        type: "uploaded"
+        type: "uploaded",
+        limit: 10
     });
-    const pictures = await requestData(options);
-    const photos = pictures.data[0].images;
+
+    const { data } = await requestData(options);
+    const photos = data.map(({ images }) => ({
+        picture: images[0].source
+    }));
+    
     res.status(200).send({
-        data: photos.map(picture => ({
-            picture: picture.source
-        })),
+        data: photos,
     });
+
 };
 
 export {
