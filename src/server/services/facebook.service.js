@@ -1,5 +1,4 @@
 import { GRAPH_URL, requestData } from "../utils/auth";
-import mock from "./mock"
 
 const fbOptions = (url, accessToken, fields)  => ({
     url: `${GRAPH_URL}/${url}`,
