@@ -18,7 +18,7 @@ const getMyProfile = async (req, res) => {
 
 const getMyPosts = async (req, res) => {
     const { accessToken } = req.session;
-    const options = fbOptions("me/photos", accessToken, "posts{message,comments,attachments}");
+    const options = fbOptions("me", accessToken, "posts{message,comments,attachments}");
     const posts = await requestData(options);
     res.status(200).send(posts);
 };
@@ -26,7 +26,7 @@ const getMyPosts = async (req, res) => {
 //me/photos?fields=images&type=uploaded
 const getMyPhotos = async (req, res) => {
     const { accessToken } = req.session;
-    const options = fbOptions("me", accessToken, "comments,images&type=uploaded");
+    const options = fbOptions("me/photos", accessToken, "comments,images&type=uploaded");
     const { data } = await requestData(options);
     res.status(200).send({
         photos: data,
